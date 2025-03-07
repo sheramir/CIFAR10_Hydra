@@ -103,5 +103,9 @@ You can easily swap model backbones through the configuration:
 
 The project includes support for MNIST classification through configuration overrides:
 
-`python train.py task=mnist_task data_module=mnist`
+`python train.py task=mnist_task data_module=mnist`</br>
+
+</br>
+source: https://www.udemy.com/course/sustainable-and-scalable-machine-learning-project-development/
+
 
