@@ -4,20 +4,20 @@ This project implements a modular image classification system for the CIFAR10 da
 
 ## Project Structure
 
-.
-├── configs/
-│ ├── config.yaml
-│ ├── cifar10_classification.yaml
-│ ├── sgd.yaml
-│ └── cifar10_model.yaml
-├── data_modules/
-│ └── cifar10.py
-├── models/
-│ └── cifar10_model.py
-├── tasks/
-│ └── cifar10_task.py
-├── train.py
-└── README.md
+.</br>
+├── configs/</br>
+│ ├── config.yaml</br>
+│ ├── cifar10_classification.yaml</br>
+│ ├── sgd.yaml</br>
+│ └── cifar10_model.yaml</br>
+├── data_modules/</br>
+│ └── cifar10.py</br>
+├── models/</br>
+│ └── cifar10_model.py</br>
+├── tasks/</br>
+│ └── cifar10_task.py</br>
+├── train.py</br>
+└── README.md</br>
 
 
 ## Features
@@ -31,18 +31,20 @@ This project implements a modular image classification system for the CIFAR10 da
 
 ## Requirements
 
-pytorch
-pytorch-lightning
-torchvision
-hydra-core
-omegaconf
+pytorch</br>
+pytorch-lightning</br>
+torchvision</br>
+hydra-core</br>
+omegaconf</br>
 
 
 ## Installation
 
+```
 git clone https://github.com/sheramir/CIFAR10_Hydra
 
 pip install -r requirements.txt
+```
 
 
 ## Usage
@@ -56,15 +58,13 @@ python train.py
 
 To override specific configurations:
 
-bash
-python train.py model=resnet18 optimizer=adam
+`python train.py model=resnet18 optimizer=adam`
 
 ### Monitoring
 
 Monitor training progress using TensorBoard:
 
-bash
-tensorboard --logdir tb_logs
+`tensorboard --logdir tb_logs`
 
 
 ## Project Components
@@ -96,14 +96,12 @@ The project uses Hydra for configuration management. Key configuration files:
 
 You can easily swap model backbones through the configuration:
 
-bash
-python train.py model.backbone=resnet34
+`python train.py model.backbone=resnet34`
 
 
 ### Training on MNIST
 
 The project includes support for MNIST classification through configuration overrides:
 
-bash
-python train.py task=mnist_task data_module=mnist
+`python train.py task=mnist_task data_module=mnist`
 
